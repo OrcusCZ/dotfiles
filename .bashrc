@@ -10,3 +10,4 @@ fi
 
 # User specific aliases and functions
 export PS1='[\[\e[1;32m\]\u\[\e[m\]@\[\e[0;33m\]\h \[\e[1;36m\]\W\[\e[m\]]\$ '
+export HISTCONTROL=ignorespace
