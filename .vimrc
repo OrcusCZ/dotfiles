@@ -8,13 +8,13 @@ let g:NERDCustomDelimiters ={
 "}}}
 
 filetype off
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"Plugin 'gmarik/Vundle.vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
 "Plugin 'scrooloose/nerdcommenter'
-"call vundle#end()
+call vundle#end()
 
 filetype plugin indent on
 syntax on
@@ -41,12 +41,17 @@ set mouse=a
 set tags=./tags;
 
 "Key mapping {{{
-imap <C-h> <Left>
-imap <C-j> <Down>
-imap <C-k> <Up>
-imap <C-l> <Right>
-nmap <Space> :set nohlsearch<Enter>
-"nmap <C-m> :make<Enter>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+nnoremap <Space> :set nohlsearch<Enter>
+nnoremap <Leader>cd :cd %:p:h<Enter>:pwd<Enter>
+"}}}
+
+"LaTeX {{{
+let g:Tex_DefaultTargetFormat = 'pdf'
+let g:Tex_MultipleCompileFormats = 'pdf'
 "}}}
 
 "Find makefile location {{{
